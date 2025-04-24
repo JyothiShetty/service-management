@@ -1,0 +1,61 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.bg-container {
+  height: 100vh;
+  background-image: url("https://st2.depositphotos.com/6504442/9281/i/450/depositphotos_92819326-stock-photo-raster-abstract-dark-blue-blurred.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  z-index: 1;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 12px;
+  flex: 1;
+  z-index: 2;
+}
+
+.content {
+  gap: 20px;
+}
+
+.welcome-heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.action-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+mat-card button {
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.dashboard-link {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+}

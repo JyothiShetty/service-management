@@ -1,0 +1,31 @@
+<div class="bg-container">
+  <div class="overlay">
+    <div class="content row justify-content-center">
+      <div class="col-12 mb-4">
+        <h4 class="welcome-heading">Welcome To Request Management !!</h4>
+      </div>
+      <div class="col-md-3">
+        <mat-card class="action-card">
+          <button mat-fab extended color="accent" (click)="onIncidentClick()">
+            Incident Request
+          </button>
+        </mat-card>
+      </div>
+      <div class="col-md-3">
+        <mat-card class="action-card">
+          <button mat-fab extended color="primary" (click)="onServiceClick()">
+            Service Request
+          </button>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <a class="dashboard-link" href="https://staging.d25g6vmjzclk4s.amplifyapp.com/" target="_blank">
+        Go to Dashboard
+      </a>
+    </div>
+
+    <router-outlet></router-outlet>
+  </div>
+</div>

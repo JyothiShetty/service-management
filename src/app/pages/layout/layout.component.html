@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="mat-elevation-z4">
+  <div class="logo-container">
+    <img
+      src="https://image4.owler.com/logo/zyter_owler_20230509_195445_large.png"
+      alt="TruCare Logo"
+      class="logo"
+    />
+  </div>
+  <span class="spacer"></span>
+  <nav class="nav-links">
+    <a mat-button [routerLink]="['/service-request']">Service Request</a>
+    <a mat-button [routerLink]="['/incident-request']">Incident Request</a>
+  </nav>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
