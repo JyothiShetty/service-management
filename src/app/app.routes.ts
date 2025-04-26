@@ -4,6 +4,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ServiceRequestComponent } from './pages/service-request/service-request.component';
 import { IncidentRequestComponent } from './pages/incident-request/incident-request.component';
+import { NewSrComponent } from './pages/new-sr/new-sr.component';
 
 export const routes: Routes = [
   {
@@ -33,4 +34,8 @@ export const routes: Routes = [
     path: 'incident-request',
     component: IncidentRequestComponent,
   },
+  {
+    path: 'new-sr',
+    component: NewSrComponent
+  }
 ];

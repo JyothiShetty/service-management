@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,7 +11,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-service-request',
+  selector: 'app-new-sr',
   standalone: true,
   imports: [
     FormsModule,
@@ -22,32 +23,28 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
     RouterLink,
     MatDividerModule, 
     MatSelectModule,
-    RouterOutlet
+    RouterOutlet,
+    CommonModule
   ],
-  templateUrl: './service-request.component.html',
-  styleUrl: '../service-request/service-request.component.css'
+  templateUrl: './new-sr.component.html',
+  styleUrl: './new-sr.component.css'
 })
-export class ServiceRequestComponent {
-   formData = {
-      department: '',
-      workgroup: '',
-      category: '',
-      subCategory: '',
-      cubicalNumber: null,
-      contactNumber: '',
-      extensionNumber: null,
-      description: '',
-      file: null
-    };
-  
-    router = inject(Router);
+export class NewSrComponent {
+  formData = {
+    department: '',
+    workgroup: '',
+    category: '',
+    subCategory: '',
+    cubicalNumber: null,
+    contactNumber: '',
+    extensionNumber: null,
+    description: '',
+    file: null,
+    cost: 0,
+    quality: 0
+  };
 
-    departments = [
-      { icon: 'memory', label: 'ITSG', href: '#ITSG' },
-      { icon: 'recent_actors', label: 'Human Resources', href: '#HumanResources' },
-      { icon: 'more_horiz', label: 'Admin', href: '#Admin' },
-      { icon: 'lock', label: 'Information Security', href: '#Compliance' }
-    ];
+   router = inject(Router);
   
     onSubmit(form: any) {
       if (form.valid) {
@@ -67,4 +64,7 @@ export class ServiceRequestComponent {
       this.router.navigate(['/dashboard']);
     }
 
+    onCategoryChange() {
+
+    }
 }

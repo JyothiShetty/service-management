@@ -14,9 +14,36 @@
           <mat-divider></mat-divider>
   
           <mat-card-content>
+            <div class="row mt-4 content">
+              <div class="col-md-3 colxs-12 depMainName">
+                <mat-icon class="matIcon">
+                  memory
+                </mat-icon>
+                <a [routerLink]="['/new-sr']">ITSG</a>
+              </div>
+              <div class="col-md-3 colxs-12 depMainName">
+                <mat-icon class="matIcon">
+                  recent_actors
+                </mat-icon>
+                <a href="">Human Resources</a>
+              </div>
+              <div class="col-md-3 colxs-12 depMainName">
+                <mat-icon class="matIcon">
+                  supervisor_account
+                </mat-icon>
+                <a href="">Admin</a>
+              </div>
+              <div class="col-md-3 colxs-12 depMainName">
+                <mat-icon class="matIcon">
+                  lock
+                </mat-icon>
+                <a href="">Information Security</a>
+              </div>
+            </div>
             
           </mat-card-content>
         </mat-card>
       </div>
     </div>
   </div>
+  <router-outlet></router-outlet>
